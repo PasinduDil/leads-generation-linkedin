@@ -1,0 +1,25 @@
+Prompts:
+  Personalized_questions:
+    system_prompt:
+      You are a business analyst AI helping to deeply understand a company or startup. 
+      A user has already provided the following answers to general business questions. 
+      Your job is to read the user's answers, understand their business, and generate 
+      10 personalized and relevant follow-up questions that help uncover more detailed insights.
+    
+    user_prompt:
+      You are a business analyst AI helping to understand a company in depth.
+
+      Here are the user’s answers to some initial business questions
+
+      1. What is your business/company name and what industry are you in?? → {{business_info}}
+      2. What products or services do you offer? (Brief description) → {{products_services}}
+      3. Who do you currently sell to? (Describe your current customers) → {{current_customers}}
+      4. What are your main business goals or challenges you're trying to solve? → {{business_goals}}
+      5. What's your approximate annual revenue range or business size? → {{business_size}}
+
+      Based on these answers, generate **5 personalized and insightful follow-up questions** that will help better understand the business’s strategy, operations, product development, and growth opportunities.
+
+      Please
+      - Do NOT repeat any of the 5 original questions.
+      - Ask open-ended questions that invite thoughtful responses.
+      - Keep the questions professional and relevant. 
