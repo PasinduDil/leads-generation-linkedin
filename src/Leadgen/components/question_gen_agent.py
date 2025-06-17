@@ -12,19 +12,12 @@ load_dotenv()
 # Access the variable
 api_key = os.getenv("GROQ_API_KEY")
 
-
-print("Groq API Key:", api_key)
-
-#Set the environment variable for Groq API key
-os.environ['GROQ_API_KEY'] = 'your-api-key'  # Replace with your actual Groq API key
-
-
 class QuestionGenAgent:
     def __init__(self, config: QuestiongeneratorConfig):
         self.config = config
 
     def question_gen_agent():
-        model = GroqModel('llama-3.3-70b-versatile',provider=GroqProvider(api_key='your-api-key'))
+        model = GroqModel('llama-3.3-70b-versatile',provider=GroqProvider(api_key=api_key))
         question_Gen_Agent= Agent(model=model,
             deps_type=dict,
             output_type=list[str],
