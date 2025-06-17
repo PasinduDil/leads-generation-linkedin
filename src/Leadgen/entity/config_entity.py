@@ -6,12 +6,9 @@ from pathlib import Path
 class BasicuserConfig:
     root_dir: Path
     source_URL: str
-    local_data_file: Path
-    unzip_dir: Path
 
 @dataclass(frozen=True)
 class QuestiongeneratorConfig:
     root_dir: Path
-    source_URL: str
-    local_data_file: Path
-    unzip_dir: Path
+    Personalized_questions:str
+    

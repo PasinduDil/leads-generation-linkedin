@@ -1,7 +1,6 @@
 from Leadgen.constants import *
 from Leadgen.utils.common import read_yaml, create_directories
-from Leadgen.entity.config_entity import (BasicuserConfig
-                                          )
+from Leadgen.entity.config_entity import (QuestiongeneratorConfig)
 
 class ConfigurationManager:
     def __init__(
@@ -18,3 +17,7 @@ class ConfigurationManager:
 
 
         create_directories([self.config.artifacts_root])
+
+    def get_model_trainer_config(self) -> QuestiongeneratorConfig:
+        prompt = self.prompt.prompts.
+
